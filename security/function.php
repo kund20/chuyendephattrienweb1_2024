@@ -3,7 +3,7 @@
 function encodeId($id) {
     $secretKey = "your_secret_key"; 
     $hashedId = hash('sha256', $id . $secretKey);
-    return rtrim(strtr(base64_encode($hashedId), '+/', '-_'), 'a');
+    return rtrim(strtr(base64_encode($hashedId), '+/', '-_'), '=');
 }   
 
 function decodeId($encodedId) {
