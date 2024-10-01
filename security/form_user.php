@@ -1,5 +1,4 @@
 <?php
-// Bắt đầu phiên
 session_start();
 require_once 'models/UserModel.php';
 require_once 'function.php';
@@ -9,7 +8,6 @@ $userModel = new UserModel();
 $user = NULL;
 $_id = NULL;
 
-// Kiểm tra ID từ URL để xác định nếu đang sửa
 if (!empty($_GET['id'])) {
     $_id = decodeId($_GET['id']);
     $user = $userModel->findUserById($_id);
@@ -19,9 +17,8 @@ $errors = [];
 $name = $user ? $user['name'] : '';
 $password = '';
 
-// Kiểm tra khi form được submit
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validate name
     if (empty($_POST["name"])) {
         $errors['name'] = "Tên là bắt buộc.";
     } else {
@@ -31,7 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Validate password
     if (empty($_POST["password"])) {
         $errors['password'] = "Mật khẩu là bắt buộc.";
     } else {
@@ -41,14 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Nếu không có lỗi, xử lý thêm hoặc cập nhật người dùng
     if (empty($errors)) {
         if (!empty($_id)) {
-            // Cập nhật người dùng
-            $_POST['id'] = $_id; // Thêm ID vào mảng POST để cập nhật
+            $_POST['id'] = $_id; 
             $userModel->updateUser($_POST);
         } else {
-            // Thêm người dùng mới
             $userModel->insertUser($_POST);
         }
         header('Location: list_users.php');
