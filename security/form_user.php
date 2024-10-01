@@ -61,19 +61,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <?php include 'views/header.php'; ?>
     <div class="container">
-
         <div class="alert alert-warning" role="alert">
-            <?php echo $user ? 'Cập nhật người dùng' : 'Thêm người dùng'; ?>
+        <label for="name">Update</label>
         </div>
 
         <form method="POST" action="">
             <?php if ($_id): ?>
-                <input type="hidden" name="id" value="<?php echo htmlspecialchars($_id); ?>"> <!-- Giữ ID gốc cho cập nhật -->
+                <input type="hidden" name="id" value="<?php echo htmlspecialchars($_id); ?>">
             <?php endif; ?>
 
             <div class="form-group">
-                <label for="name">Tên</label>
-                <input class="form-control" type="text" placeholder="Tên" name="name" id="name"
+                <label for="name">Name</label>
+                <input class="form-control" type="text" placeholder="Name" name="name" id="name"
                     value="<?php echo htmlspecialchars($name); ?>">
                 <?php if (isset($errors['name'])): ?>
                     <div style="color: red;"><?php echo $errors['name']; ?></div>
@@ -81,8 +80,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="form-group">
-                <label for="password">Mật khẩu</label>
-                <input class="form-control" type="password" placeholder="Mật khẩu" name="password" id="password">
+                <label for="password">password</label>
+                <input class="form-control" type="password" placeholder="password" name="password" id="password">
                 <?php if (isset($errors['password'])): ?>
                     <div style="color: red;"><?php echo $errors['password']; ?></div>
                 <?php endif; ?>
