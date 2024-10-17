@@ -14,12 +14,10 @@
 <body>
     <div class="container">
         <div class="row">
-            <!-- Main Content -->
             <div class="col-md-8">
                 <div class="main-content">
                     <div class="post-image">
                         <img src="pic/Blog-standard.jpg" alt="Walking Shoes" class="img-fluid">
-                        <!-- class img-fluid cho hình ảnh -->
                     </div>
                     <div class="post-meta">
                         <span>Accessories, Biking</span>
@@ -43,13 +41,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Sidebar -->
             <div class="col-md-4">
                 <div class="sidebar">
                     <div class="author">
                         <h4>ABOUT AUTHOR:</h4>
                         <img src="pic/avatar.jpg" alt="Author" class="author-image img-fluid">
-                        <!-- class img-fluid cho hình ảnh -->
                         <p class="author-description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore

@@ -48,7 +48,6 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: #464646;
-  /* Màu chữ mặc định */
   float: right;
   text-decoration: none;
   font-family: "Roboto Condensed", sans-serif;
@@ -69,7 +68,6 @@ body {
   font-size: 14px;
   color: #464646;
 }
-
 .sidebar .categories h4,
 .sidebar .tags h4 {
   margin: 0 0 13px;
@@ -93,7 +91,6 @@ body {
   color: #777;
 }
 /* Media Queries for Responsive Design */
-/* Màn hình dưới 1200px (tablets) */
 @media (max-width: 1200px) {
   .container {
     padding: 0 20px;
@@ -107,7 +104,7 @@ body {
     order: 1;
   }
 }
-/* Màn hình dưới 768px (mobile) */
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
