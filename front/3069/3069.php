@@ -22,25 +22,19 @@
                 </div>
             </div>
         </div>
-        <!-- Start News Section -->
         <h2>News</h2>
         <div class="news-container">
-            <!-- News item 1 -->
             <div class="announcement-single">
                 <h3>
                     <span class="label label-default">May 6th</span>
                     <a href="">Welcome To WHMCS</a>
                 </h3>
-                
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae deleniti, reiciendis molestias id
                     harum, magnam nulla quaerat quod praesentium, quos sequi? Laudantium, nisi tempora accusamus,
                     aliquam quisquam vel. Nihil, laborum. Thank you for choosing WHMCS Template !Welcome to WHMCS! You
-                    have made a great choice and we want to help you get up ... <a href="" class="label label-warning">Read more >></a></p>
-                
-                
+                    have made a great choice and we want to help you get up ... <a href=""
+                        class="label label-warning">Read more >></a></p>
             </div>
-
-            <!-- News item 2 -->
             <div class="announcement-single">
                 <h3>
                     <span class="label label-default">Sept 6th</span>
@@ -49,21 +43,16 @@
                 <p>Thank you for choosing WHMCS Template !Welcome to WHMCS! You have made a great choice and we want to
                     help you get up and running as quickly as possible.This is a sample announcement. Announcements are
                     a great way to keep your customers informed about news and special offers. You can edit or delete
-                    this announcement by logging into the admin area ... <a href="" class="label label-warning">Read more >></a></p>
-                
+                    this announcement by logging into the admin area ... <a href="" class="label label-warning">Read
+                        more >></a></p>
             </div>
-
-            <!-- Add more news items if needed -->
         </div>
-        <!-- End News Section -->
 
         <footer>
             Powered by <a href="#">WHMCompleteSolution</a>
         </footer>
     </div>
-
-
-    </div>
+    
 </body>
 
 </html>
