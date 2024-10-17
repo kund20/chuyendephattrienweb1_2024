@@ -1,0 +1,175 @@
+// Variables
+@primary-color: #0073e6;
+@secondary-color: #888888;
+@background-color: #f8f8f8;
+@text-color: #333;
+@link-hover-color: @primary-color;
+@label-padding: 1px 8px;
+@label-warning-padding: 5px 7px;
+@padding-large: 20px;
+@padding-medium: 10px;
+@padding-small: 5px;
+@border-color: #e6e6e6;
+@footer-background: #f1f1f1;
+@license-warning-background: #ffffd2;
+@font-size: 14px;
+@font-size-medium: 34px;
+@font-size-large: 45px;
+
+// Global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: @background-color;
+    color: @text-color;
+    padding: @padding-large;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: @padding-medium;
+}
+
+.dev-license {
+    margin: 0 0 10px 0;
+    padding: 10px 35px;
+    background-color: @license-warning-background;
+    color: #555;
+    font-size: @font-size;
+    text-align: center;
+}
+
+// Headings
+h2 {
+    font-size: @font-size-large;
+    margin-bottom: 20px;
+}
+
+// News container
+.news-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+// Announcement single
+.announcement-single {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    a {
+        font-size: @font-size-medium;
+        color: @primary-color;
+        margin-bottom: 10px;
+        &:hover{
+            color: @primary-color;
+            text-decoration: none;
+        }
+    }
+
+
+    .label-default {
+        background-color: @secondary-color;
+        color: white;
+        padding: @label-padding;
+        font-size: 25.5;
+        margin-right: 10px;
+    }
+
+    a.label-warning {
+        background-color: @primary-color;
+        color: white;
+        padding: @label-warning-padding;
+        font-size: @font-size;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+
+    p {
+        font-size: @font-size;
+        line-height: 1.6;
+        color: #555;
+    }
+}
+
+// Footer section
+footer {
+    text-align: center;
+    a {
+        text-decoration: none;
+
+        &:hover {
+            color: @primary-color;
+            text-decoration: none;
+        }
+    }
+}
+
+// License warning
+.license-warning {
+    background-color: @license-warning-background;
+    color: #ffffff;
+    font-size: @font-size;
+    padding: 10px 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: @padding-medium;
+    }
+
+    .news-container {
+        display: block; // Display as a block so that each item stacks vertically
+    }
+
+    .announcement-single {
+        width: 100%; // Full width on smaller devices
+        padding: @padding-medium; // Adjust padding for mobile
+    }
+
+    h2 {
+        font-size: @font-size-large; // Reduce the size of the heading on smaller screens
+    }
+
+    .announcement-single h3 {
+        font-size: @font-size-medium; // Smaller title on mobile screens
+    }
+
+    .announcement-single p {
+        font-size: @font-size;
+    }
+
+    .dev-license {
+        font-size: 14px; // Slightly smaller font for license warning on mobile
+        padding: @padding-small;
+    }
+
+    footer {
+        padding: @padding-small 0; // Reduce padding in footer for smaller screens
+    }
+}
+
+// Very small devices (e.g., mobile phones)
+@media (max-width: 480px) {
+    body {
+        padding: @padding-small;
+    }
+
+    .announcement-single {
+        padding: @padding-small;
+    }
+
+    .dev-license {
+        padding: 5px 15px; // Further reduce padding for mobile
+    }
+}

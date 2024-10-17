@@ -1,0 +1,146 @@
+body {
+  font-family: Raleway, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.main-content,
+.sidebar {
+  background-color: #fff;
+  padding: 20px;
+}
+.main-content {
+  flex: 3;
+}
+.main-content .post-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.main-content .post-meta {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+.main-content .post-title {
+  font-size: 28px;
+  margin: 10px 0;
+}
+.main-content .post-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #464646;
+}
+.main-content .post-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+.main-content .read-more {
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  color: #464646;
+  /* Màu chữ mặc định */
+  float: right;
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.sidebar {
+  flex: 1;
+}
+.sidebar .author h4 {
+  margin: 0 0 13px;
+  font-size: 16px;
+}
+.sidebar .author .author-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+.sidebar .author .author-description {
+  font-size: 14px;
+  color: #464646;
+}
+
+.sidebar .categories h4,
+.sidebar .tags h4 {
+  margin: 0 0 13px;
+  font-size: 16px;
+}
+.sidebar .categories ul,
+.sidebar .tags ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar .categories ul li,
+.sidebar .tags ul li {
+  font-weight: 400;
+  font-size: 14px;
+  color: #464646;
+  margin-bottom: 10px;
+}
+.sidebar .categories p,
+.sidebar .tags p {
+  font-size: 14px;
+  color: #777;
+}
+/* Media Queries for Responsive Design */
+/* Màn hình dưới 1200px (tablets) */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+  .sidebar {
+    flex: 100%;
+    order: 2;
+  }
+  .main-content {
+    flex: 100%;
+    order: 1;
+  }
+}
+/* Màn hình dưới 768px (mobile) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .main-content,
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+  .post-title {
+    font-size: 24px;
+  }
+  .post-text {
+    font-size: 14px;
+  }
+  .read-more {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .sidebar {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .post-title {
+    font-size: 20px;
+  }
+  .post-text {
+    font-size: 13px;
+  }
+  .read-more {
+    font-size: 12px;
+  }
+}

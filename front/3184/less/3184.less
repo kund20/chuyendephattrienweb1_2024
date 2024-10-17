@@ -1,0 +1,185 @@
+@primary-color: #ffcc00;
+@hover-color: #e6b800;
+@text-color: #464646;
+@muted-color: #777;
+@background-color: #fff;
+@box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+@font-family: Raleway, sans-serif;
+
+body {
+    font-family: @font-family;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-content,
+.sidebar {
+    background-color: @background-color;
+    padding: 20px;
+
+}
+
+.main-content {
+    flex: 3;
+
+    .post-image {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    }
+
+    .post-meta {
+        font-size: 14px;
+        color: @muted-color;
+        margin-top: 10px;
+    }
+
+    .post-title {
+        font-size: 28px;
+        margin: 10px 0;
+    }
+
+    .post-text {
+        font-size: 16px;
+        line-height: 1.6;
+        color: @text-color;
+    }
+
+    .post-footer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: @muted-color;
+    }
+
+    .read-more {
+        display: flex;
+        font-size: 16px;
+        font-weight: 600;
+        color: #464646;
+        float: right;
+        text-decoration: none;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+}
+
+.sidebar {
+    flex: 1;
+
+    .author {
+        h4 {
+            margin: 0 0 13px;
+            font-size: 16px;
+        }
+        .author-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .author-description {
+            font-size: 14px;
+            color: @text-color;
+        }
+    }
+
+    .categories,
+    .tags {
+        h4 {
+            margin: 0 0 13px;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                font-weight: 400;
+                font-size: 14px;
+                color: @text-color;
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            color: @muted-color;
+        }
+    }
+}
+
+/* Media Queries for Responsive Design */
+
+/* Màn hình dưới 1200px (tablets) */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .sidebar {
+        flex: 100%; // Sidebar chiếm 100% chiều rộng
+        order: 2; // Di chuyển sidebar xuống dưới
+    }
+
+    .main-content {
+        flex: 100%; // Main content chiếm 100% chiều rộng
+        order: 1; // Di chuyển main content lên trên
+    }
+}
+
+/* Màn hình dưới 768px (mobile) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; // Xếp theo cột
+        padding: 0 10px;
+    }
+
+    .main-content,
+    .sidebar {
+        width: 100%; // Cả hai phần tử chiếm toàn bộ chiều rộng
+        padding: 15px; // Giảm padding cho di động
+    }
+
+    .post-title {
+        font-size: 24px; // Giảm kích thước chữ tiêu đề
+    }
+
+    .post-text {
+        font-size: 14px; // Giảm kích thước chữ nội dung
+    }
+
+    .read-more {
+        font-size: 12px; // Giảm kích thước chữ nút "read more"
+        text-align: center; // Căn giữa nút "read more"
+        margin-top: 10px; // Khoảng cách từ dưới
+    }
+
+    .sidebar {
+        margin-top: 20px; // Khoảng cách trên sidebar
+    }
+}
+
+@media (max-width: 576px) {
+    .post-title {
+        font-size: 20px; // Giảm kích thước tiêu đề cho màn hình nhỏ
+    }
+
+    .post-text {
+        font-size: 13px; // Giảm kích thước chữ nội dung
+    }
+
+    .read-more {
+        font-size: 12px;
+    }
+}
