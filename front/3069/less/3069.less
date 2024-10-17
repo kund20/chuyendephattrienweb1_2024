@@ -16,7 +16,6 @@
 @font-size-medium: 34px;
 @font-size-large: 45px;
 
-// Global styles
 * {
     margin: 0;
     padding: 0;
@@ -45,20 +44,17 @@ body {
     text-align: center;
 }
 
-// Headings
 h2 {
     font-size: @font-size-large;
     margin-bottom: 20px;
 }
 
-// News container
 .news-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
 }
 
-// Announcement single
 .announcement-single {
     width: 100%;
     background-color: white;
@@ -100,7 +96,6 @@ h2 {
     }
 }
 
-// Footer section
 footer {
     text-align: center;
     a {
@@ -113,7 +108,6 @@ footer {
     }
 }
 
-// License warning
 .license-warning {
     background-color: @license-warning-background;
     color: #ffffff;
@@ -129,20 +123,20 @@ footer {
     }
 
     .news-container {
-        display: block; // Display as a block so that each item stacks vertically
+        display: block; 
     }
 
     .announcement-single {
-        width: 100%; // Full width on smaller devices
-        padding: @padding-medium; // Adjust padding for mobile
+        width: 100%; 
+        padding: @padding-medium; 
     }
 
     h2 {
-        font-size: @font-size-large; // Reduce the size of the heading on smaller screens
+        font-size: @font-size-large; 
     }
 
     .announcement-single h3 {
-        font-size: @font-size-medium; // Smaller title on mobile screens
+        font-size: @font-size-medium; 
     }
 
     .announcement-single p {
@@ -150,16 +144,16 @@ footer {
     }
 
     .dev-license {
-        font-size: 14px; // Slightly smaller font for license warning on mobile
+        font-size: 14px; 
         padding: @padding-small;
     }
 
     footer {
-        padding: @padding-small 0; // Reduce padding in footer for smaller screens
+        padding: @padding-small 0; 
     }
 }
 
-// Very small devices (e.g., mobile phones)
+
 @media (max-width: 480px) {
     body {
         padding: @padding-small;
@@ -170,6 +164,6 @@ footer {
     }
 
     .dev-license {
-        padding: 5px 15px; // Further reduce padding for mobile
+        padding: 5px 15px; 
     }
 }
